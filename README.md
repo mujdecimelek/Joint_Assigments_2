@@ -1,70 +1,70 @@
 # Joint_Assigments_2
 
-<h1>Öğrenci Notları Tahmini</h1>
+<h1>Student Grades Prediction</h1>
 
-<p>Bu repo, çeşitli faktörler kullanarak öğrenci final notlarını tahmin etmek için yapılan analizleri ve kodları içerir. Proje, veri yükleme, ön işleme, keşifsel veri analizi (EDA), model eğitimi ve model değerlendirmesini kapsamaktadır.</p>
+<p>This repository contains the code and analysis for predicting student final grades using various factors. The project involves data loading, preprocessing, exploratory data analysis (EDA), model training, and model evaluation.</p>
 
-<h2>İçindekiler</h2>
+<h2>Table of Contents</h2>
 <ul>
-  <li><a href="#giriş">Giriş</a></li>
-  <li><a href="#veri-yükleme-ve-ön-işleme">Veri Yükleme ve Ön İşleme</a></li>
-  <li><a href="#keşifsel-veri-analizi-eda">Keşifsel Veri Analizi (EDA)</a></li>
-  <li><a href="#model-eğitimi">Model Eğitimi</a></li>
-  <li><a href="#model-değerlendirmesi">Model Değerlendirmesi</a></li>
-  <li><a href="#sonuç">Sonuç</a></li>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#data-loading-and-preprocessing">Data Loading and Preprocessing</a></li>
+  <li><a href="#exploratory-data-analysis-eda">Exploratory Data Analysis (EDA)</a></li>
+  <li><a href="#model-training">Model Training</a></li>
+  <li><a href="#model-evaluation">Model Evaluation</a></li>
+  <li><a href="#conclusion">Conclusion</a></li>
 </ul>
 
-<h2 id="giriş">Giriş</h2>
-<p>Bu projenin amacı, doğrusal regresyon modeli kullanarak öğrenci final notlarını tahmin etmektir. Veri seti, akademik performansı etkileyebilecek çeşitli demografik ve davranışsal özellikler içermektedir.</p>
+<h2 id="introduction">Introduction</h2>
+<p>The goal of this project is to predict student final grades using a linear regression model. The dataset contains various demographic and behavioral features that could influence academic performance.</p>
 
-<h2 id="veri-yükleme-ve-ön-işleme">Veri Yükleme ve Ön İşleme</h2>
-<p>Projeye, iki veri setini (matematik ve Portekizce dersleri için) yükleyerek başlanır. Bu veri setleri ortak özellikler kullanılarak birleştirilir. Veri seti, gereksiz sütunların çıkarılması ve eksik değerlerin işlenmesiyle temizlenir.</p>
+<h2 id="data-loading-and-preprocessing">Data Loading and Preprocessing</h2>
+<p>Start by loading the data and merging two datasets (math and Portuguese classes) based on common attributes. The data is then cleaned by removing unnecessary columns and handling missing values.</p>
 
-<h2 id="keşifsel-veri-analizi-eda">Keşifsel Veri Analizi (EDA)</h2>
-<p>EDA aşamasında, farklı değişkenler ve final notları arasındaki ilişkileri anlamak için veri analiz edilir. Bazı önemli analizler şunlardır:</p>
+<h2 id="exploratory-data-analysis-eda">Exploratory Data Analysis (EDA)</h2>
+<p>During the EDA phase, analyze the data to understand relationships between different variables and the final grades. Some key analyses include:</p>
 <ul>
-  <li><strong>Cinsiyet Karşılaştırması:</strong> Erkek ve kadın öğrencilerin final notlarının karşılaştırılması.</li>
-  <li><strong>Çalışma Süresi vs Final Notları:</strong> Çalışma süresinin final notlarına etkisinin analizi.</li>
-  <li><strong>Başarısızlıklar vs Final Notları:</strong> Başarısızlık sayısının öğrencilerin final notlarına etkisinin incelenmesi.</li>
-  <li><strong>Alkol Tüketimi vs Final Notları:</strong> Alkol tüketiminin akademik performansa etkisinin analizi.</li>
-  <li><strong>Devamsızlıklar vs Final Notları:</strong> Öğrenci devamsızlıklarının final notlarına etkisinin gözlemlenmesi.</li>
+  <li><strong>Gender Comparison:</strong> Comparing final grades between male and female students.</li>
+  <li><strong>Study Time vs Final Grades:</strong> Analyzing the impact of study time on final grades.</li>
+  <li><strong>Failures vs Final Grades:</strong> Exploring how the number of failures impacts students' final grades.</li>
+  <li><strong>Alcohol Consumption vs Final Grades:</strong> Analyzing the effect of alcohol consumption on academic performance.</li>
+  <li><strong>Absences vs Final Grades:</strong> Observing the impact of student absences on their final grades.</li>
 </ul>
 
-<h2 id="model-eğitimi">Model Eğitimi</h2>
-<p>Doğrusal regresyon modeli, ön işlenmiş veriler kullanılarak eğitilmiştir. Veri seti, eğitim ve test setlerine ayrılmış ve model eğitim seti üzerinde eğitilmiştir.</p>
+<h2 id="model-training">Model Training</h2>
+<p>A linear regression model is trained using the preprocessed data. The dataset is split into training and testing sets, and the model is trained on the training set.</p>
 
-<h2 id="model-değerlendirmesi">Model Değerlendirmesi</h2>
-<p>Modelin performansı çeşitli metrikler kullanılarak değerlendirilmiştir:</p>
+<h2 id="model-evaluation">Model Evaluation</h2>
+<p>The model's performance is evaluated using various metrics:</p>
 <ul>
-  <li><strong>Ortalama Mutlak Hata (MAE):</strong> Hataların ortalama büyüklüğünü ölçer.</li>
-  <li><strong>Ortalama Kare Hata (MSE):</strong> Hataların karelerinin ortalamasını ölçer.</li>
-  <li><strong>Kök Ortalama Kare Hata (RMSE):</strong> Hataların karelerinin ortalamasının kareköküdür.</li>
-  <li><strong>R<sup>2</sup> Skoru:</strong> Bağımlı değişkenin varyansının bağımsız değişkenler tarafından ne kadarının açıklandığını gösterir.</li>
+  <li><strong>Mean Absolute Error (MAE):</strong> Measures the average magnitude of the errors.</li>
+  <li><strong>Mean Squared Error (MSE):</strong> Measures the average of the squares of the errors.</li>
+  <li><strong>Root Mean Squared Error (RMSE):</strong> The square root of the average of squared differences.</li>
+  <li><strong>R<sup>2</sup> Score:</strong> Represents the proportion of the variance for the dependent variable that's explained by the independent variables.</li>
 </ul>
 
-<h3>Performans Metrikleri</h3>
+<h3>Performance Metrics</h3>
 <ul>
-  <li><strong>Ortalama Mutlak Hata (MAE):</strong> 3.5465264826446563</li>
-  <li><strong>Ortalama Kare Hata (MSE):</strong> 21.428702413016374</li>
-  <li><strong>Kök Ortalama Kare Hata (RMSE):</strong> 4.629114467781905</li>
-  <li><strong>R<sup>2</sup> Skoru:</strong> 0.006027261013986318</li>
+  <li><strong>Mean Absolute Error (MAE):</strong> 3.5465264826446563</li>
+  <li><strong>Mean Squared Error (MSE):</strong> 21.428702413016374</li>
+  <li><strong>Root Mean Squared Error (RMSE):</strong> 4.629114467781905</li>
+  <li><strong>R<sup>2</sup> Score:</strong> 0.006027261013986318</li>
 </ul>
 
-<h3>Değerlendirme ve Yorum</h3>
-<p>Model, R<sup>2</sup> skoru 0.006 ve hata metrikleri (MAE, MSE, RMSE) ile zayıf bir performans göstermektedir. Bu, modelin tahminlerinin gerçek değerlere iyi uymadığını göstermektedir. Bu sonuçlar genellikle aşağıdaki nedenlerden dolayı ortaya çıkabilir:</p>
+<h3>Evaluation and Commentary</h3>
+<p>The model shows poor performance with an R<sup>2</sup> score of 0.006 and error metrics (MAE, MSE, RMSE) indicating significant discrepancies between predicted and actual values. These results can usually occur due to the following reasons:</p>
 <ol>
-    <li><strong>Model Yetersizliği:</strong> Model, eğitim verilerini iyi öğrenememiş ve test verileri üzerinde zayıf tahminler yapmaktadır. Bu durumda, model verideki temel kalıpları yakalayamamış olabilir.</li>
-    <li><strong>Veri Karmaşıklığı:</strong> Bağımsız ve bağımlı değişkenler arasında lineer olmayan veya karmaşık bir ilişki olabilir ve lineer model bunu yakalayamamış olabilir.</li>
-    <li><strong>Yetersiz Özellikler:</strong> Modelde kullanılan özellikler, bağımlı değişkeni doğru bir şekilde tahmin etmek için yeterli olmayabilir.</li>
+    <li><strong>Model Underfitting:</strong> The model has not captured the underlying patterns in the training data and performs poorly on the test data. In this case, the model may not be complex enough.</li>
+    <li><strong>Data Complexity:</strong> There might be a non-linear or complex relationship between the independent and dependent variables, which the linear model could not capture.</li>
+    <li><strong>Insufficient Features:</strong> The features used in the model may not be sufficient to accurately predict the dependent variable.</li>
 </ol>
 
-<h4>R<sup>2</sup> Skoru ve Hata Metrikleri</h4>
+<h4>R<sup>2</sup> Score and Error Metrics</h4>
 <ul>
-    <li><strong>Ortalama Mutlak Hata (MAE):</strong> Bir tahmin kümesindeki hataların ortalama büyüklüğünü yönlerini dikkate almadan ölçer. Daha yüksek bir değer, tahminlerin daha az doğru olduğunu gösterir.</li>
-    <li><strong>Ortalama Kare Hata (MSE):</strong> Hataların karelerinin ortalamasını ölçer, yani tahmin edilen değerler ile gerçek değerler arasındaki kare farklarının ortalamasıdır. Daha yüksek bir değer, modelin daha büyük hatalar yaptığını gösterir.</li>
-    <li><strong>Kök Ortalama Kare Hata (RMSE):</strong> Tahmin ve gerçek gözlem arasındaki kare farklarının ortalamasının kareköküdür. Daha yüksek bir değer, hataların daha büyük olduğunu ve modelin performansının kötü olduğunu gösterir.</li>
-    <li><strong>R<sup>2</sup> Skoru:</strong> Bir regresyon modelinde bağımsız değişken(ler) tarafından açıklanan bağımlı değişken varyansının oranını temsil eden istatistiksel bir ölçüdür. R<sup>2</sup> skorunun 1.0'a yakın olması, modelin tüm varyansı açıkladığını ve mükemmel bir uyum sağladığını gösterir.</li>
+    <li><strong>Mean Absolute Error (MAE):</strong> Measures the average magnitude of the errors in a set of predictions, without considering their direction. A higher value indicates less accurate predictions.</li>
+    <li><strong>Mean Squared Error (MSE):</strong> Measures the average of the squares of the errors—that is, the average squared difference between the estimated values and what is estimated. A higher value indicates the model is making larger errors.</li>
+    <li><strong>Root Mean Squared Error (RMSE):</strong> The square root of the average of squared differences between prediction and actual observation. A higher value indicates larger errors and poor model performance.</li>
+    <li><strong>R<sup>2</sup> Score:</strong> A statistical measure that represents the proportion of the variance for a dependent variable that's explained by an independent variable or variables in a regression model. An R<sup>2</sup> score close to 0 indicates the model does not explain much of the variance.</li>
 </ul>
 
-<h2 id="sonuç">Sonuç</h2>
-<p>Bu proje, öğrenci final notlarını tahmin etmek için doğrusal regresyon modelinin uygulanmasını kapsamaktadır. Model, mevcut verilerle düşük performans göstermiştir, bu da daha fazla özellik mühendisliği ve model iyileştirme gerektirebileceğini göstermektedir.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This project demonstrates the application of a linear regression model to predict student final grades. The model showed poor performance with the current data, indicating the need for further feature engineering and model improvement.</p>
