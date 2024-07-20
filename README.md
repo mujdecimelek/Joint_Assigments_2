@@ -1,5 +1,3 @@
-# Joint_Assigments_2
-
 <h1>Student Grades Prediction</h1>
 
 <p>This repository contains the code and analysis for predicting student final grades using various factors. The project involves data loading, preprocessing, exploratory data analysis (EDA), model training, and model evaluation.</p>
